@@ -24,7 +24,6 @@ import {
 import {
   darkmode,
   scrollNavbar,
-  handleLoading,
   Loading,
   colorTextNavbar,
 } from "./interective/index.js";
@@ -56,7 +55,6 @@ async function main() {
   ModalProduct(db);
   AddProductForModal(db);
   closeModal();
-  handleLoading();
   Loading();
   colorTextNavbar();
 }

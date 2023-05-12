@@ -41,7 +41,13 @@ export function handleLoading() {
   }
 }
 export function Loading() {
-  window.addEventListener("load", async () => handleLoading(), false);
+  if (window.localStorage.getItem("products")) {
+    const idLoad = document.querySelector("#Load");
+    idLoad.classList.toggle("loading_finish");
+    idLoad.addEventListener("transitionend", () => {
+      idLoad.classList.remove("loading");
+    });
+  }
 }
 export function colorTextNavbar() {
   const observer = new IntersectionObserver((entries) => {
