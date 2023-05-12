@@ -172,34 +172,50 @@ header {
 }
 .filter {
   text-align: center;
-  padding: 0.5rem;
-  transition: 0.5s;
   cursor: pointer;
-}
-.filter :hover {
-  color: #fff;
-}
-.Filters :hover {
-  background-color: var(--button-color);
-  color: #ffff;
+  padding: 0.5rem;
+  transition: background-color 0.5s;
+  box-sizing: var(--shadow-general);
 }
 
+.filter p {
+  transition: color 0.5s;
+}
+
+.filter p:nth-child(1) {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.filter p:nth-child(2) {
+  color: var(--text-color-light);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.filter:hover {
+  background-color: var(--button-color);
+}
+
+.filter:hover p {
+  color: #fff;
+}
+.mixitup-control-active {
+  background-color: var(--button-color);
+}
+.mixitup-control-active p:nth-child(1) {
+  background-color: var(--button-color);
+  color: #fff;
+}
+.mixitup-control-active p:nth-child(2) {
+  background-color: var(--button-color);
+  color: #fff;
+}
 .product_img :hover {
   transform: translateY(-10px);
   transition: 0.5s;
 }
 
-.mixitup-control-active {
-  background-color: var(--button-color);
-  color: #fff;
-}
-.mixitup-control-active p:nth-child(1) {
-  color: #fff;
-}
-.mixitup-control-active p:nth-child(2) {
-  color: #fff;
-  font-weight: 500;
-}
 .amountProducts {
   width: 20px;
   height: 20px;
@@ -340,6 +356,7 @@ header {
   display: flex;
   align-items: center;
   border-radius: 1rem;
+  gap: 1rem;
 }
 .cart_product--img {
   width: 40%;
