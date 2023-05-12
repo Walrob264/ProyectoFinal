@@ -12,7 +12,7 @@ export function printProducts(db) {
             </div>
     
             <div class="product_info">
-            <h4>$${product.price}| <span><b>Stock</b>: ${product.quantity}   ${buttonAdd}</span></h4>
+            <h4>$${product.price}.00| <span><b>Stock</b>: ${product.quantity}   ${buttonAdd}</span></h4>
     
             <p class="showModalProduct" id="${product.id}">${product.name}</p>
             
@@ -93,7 +93,7 @@ export function printProductsInCart(db) {
               <img src= "${image}" alt="imagen"/>
             </div>
             <div class= "cartproduct--body">
-              <h4>${name} | ${price} </h4>
+              <h4>${name} | ${price}.00 </h4>
               <p> Stock: ${quantity} </p>
     
               <div class="cart__product--body-op" id="${id}" >
@@ -205,7 +205,7 @@ export function ModalProduct(db) {
                 <p class="ContentProduct_p">${product.description}</p>
         
                 <div class="contentProduct_info">
-                <h3>$${product.price}  ${buttonAdd}</h3> 
+                <h3>$${product.price}.00  ${buttonAdd}</h3> 
                 <p>Stock : ${product.quantity}</p> 
                 </div>
             </div>
